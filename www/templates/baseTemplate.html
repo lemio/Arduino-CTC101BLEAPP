@@ -1,0 +1,60 @@
+
+<ion-side-menus>
+	<ion-side-menu-content>
+		<ion-nav-bar class="bar-positive" align-title="left">
+
+<!--
+	      <ion-nav-buttons side="left">
+	        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+	        </button>
+	      </ion-nav-buttons>
+-->
+				<ion-nav-buttons side="right">
+          <button class="button button-clear" ng-click="connectClicked()">
+              {{peripheral==undefined?"connect":"disconnect"}}
+          </button>
+				</ion-nav-buttons>
+
+
+			
+		</ion-nav-bar>
+		<ion-nav-view class="main" name="content"></ion-nav-view>
+
+
+	</ion-side-menu-content>
+
+
+
+	<ion-side-menu side="left">
+
+		<ion-header-bar>
+			<h1>Projects</h1>
+			
+		</ion-header-bar>
+
+		<ion-content>
+			<ion-list>
+				<ion-item menu-close href="#/app/blemessenger">
+					BLE Messenger
+				</ion-item>
+				<ion-item menu-close href="#/app/tamagotchi">
+					Tamagotchi
+				</ion-item>
+				<ion-item menu-close href="#/app/blerobot">
+					Logo Robot
+				</ion-item>
+				<ion-item menu-close href="#/app/uart">
+					uart
+				</ion-item>
+				<ion-item menu-close href="#/app/welcome">
+					welcome
+				</ion-item>
+
+			</ion-list>
+				<a href="#" ng-click="changeState()">click me</a>
+
+
+		</ion-content>
+
+	</ion-side-menu>
+</ion-side-menus>

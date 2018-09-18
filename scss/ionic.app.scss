@@ -1,0 +1,319 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$positive:                        #17979C !default;
+$positive_dark:										#005c5f !default;
+
+$font-family-base: 'TypoNine';
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+@import "www/css/button";
+@import "www/css/fonts";
+
+@mixin flexFlow{
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+
+body{
+	color:#333;
+}
+
+.main ion-content{
+	padding:10px;
+}
+
+button.base{
+	padding:0 8px;
+	line-height:42px;
+}
+/*
+* Welcome View
+*
+*
+*/
+.welcomeText{
+	text-align:center;
+	font-size:1.1em;
+	margin:auto;
+
+
+	&.wt1{
+		@media (max-width:768px){
+			width:300px;
+		}
+		padding-bottom:50px;
+	};
+
+	&.wt2{
+		@media (max-width:768px){
+			width:220px;
+		}
+		padding-bottom:20px;
+	};
+
+	&.wt3{
+		width:125px;
+		text-align:left;
+		list-style:disc inside;
+	};
+}
+
+.welcomeImg{
+	font-size:4em;
+	margin:auto;
+	padding:50px 0 30px 0;
+	width:1em;
+
+}
+
+
+
+
+/*
+*	Alien Baby
+*
+*
+*/
+$red:#F52D1D;
+$blue:#224CA4;
+$green:#DFF11D;
+
+#TamagotchiView .wrapper{
+	padding-top:40px;
+	width:85%;
+	margin:auto;
+}
+#TamagotchiView .row{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+@media screen and (max-width:768px){
+	.col-xs-3{
+		//@extend %col-75-d
+		width:75%;
+	}
+}
+
+@media screen and (min-width:768px){
+	.col-sm-1{
+		//@extend %col-20-d
+		width:20%;
+	}
+	.col-sm-4{
+		//@extend %col-80-d
+		width:80%;
+
+	}	
+}
+
+@media screen and (min-width:992px){
+	.col-md-1{
+		//@extend %col-10-d
+		width:10%;
+
+	}
+	.col-md-9{
+		//@extend %col-90-d
+		width:90%;
+	}	
+}
+.progressBar{
+	height:30px;
+	background-color:#EEE;
+
+	.inner{
+		height:100%;
+	}
+	&#foodLV .inner{
+		background-color:$red;
+	}
+	&#playLV .inner{
+		background-color:$green;
+	}
+	&#cleanLV .inner{
+		background-color:$blue;
+	}
+}
+/*
+*	Rover
+*
+*
+*/
+#LogoRobot{
+
+	#logoCommands{
+		/*border:1px solid black;*/
+		background:#eee;
+		border-radius:10px;
+		padding:5px;
+		margin:10px 0;
+
+		min-height:10em;
+	}
+	.logoCommand{
+		font-size:3em;
+		line-height:1;
+	}
+	#logoControls{
+		@include flexFlow;
+
+	  -webkit-flex-flow: row wrap;
+	  justify-content: space-between;
+
+	  @media (min-width:480px){
+	  	justify-content: flex-start;
+		}
+	}
+	#logoControls button{
+		margin-right:0;
+	  @media (min-width:480px){
+	  	margin-right:5px;
+		}
+	}
+}
+/*
+*	Messenger
+*
+*
+*/
+#MessengerView{
+
+
+	#dataDisplay{
+		margin:10px 0 18px 0;
+		&.empty{
+			color:#ccc;
+		} 
+	}
+
+ #statusDiv{
+		margin:10px 0;
+	}
+ button{
+		margin:10px 0;
+	}
+}
+
+/*
+*	uart
+*
+*
+*/
+
+#uart{
+ .scroll{
+		display:table;
+		height:calc(100% - 38px);
+		width:100%;
+	}
+	.tabContainer{
+		display:table-cell;
+		vertical-align: middle;
+		text-align:center;
+	}
+}
+
+#valueDisplayContainer{
+	padding:0 20px;
+
+	@include flexFlow;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+	.valueDisplay, .addValueDisplay{
+		margin:10px 0;
+		background:#DEDEDE;
+		width:110px;
+		height:120px;
+		padding:10px;
+		text-align:center;
+		position:relative;
+		transition: all ease-out .1s;
+	}
+
+	h1{
+		height:2em;
+		font-size:1.1em;
+		text-overflow:ellipsis;
+		margin-top:6px;
+	}
+	.content{
+		width:90px;
+		font-size:2.5em;
+		font-weight:bold;
+		position:absolute;
+		top:59px;
+		line-height:1.1em;
+	}
+
+}
+
+#CustomControlContainer{
+
+  .row{
+		@include flexFlow
+		justify-content:space-around;
+		width:300px;
+		margin:auto;
+
+		&:nth-child(2){
+			justify-content:center;
+			margin-bottom:30px;
+		}
+	}
+
+	.customControl{
+		margin:0 3px;
+	}
+}
+
+#editButtonContainer{
+	/**/
+
+	&.uartTab-0{
+		display:table-row;
+		height:0;
+		text-align:right;
+	}
+	&.uartTab-1{
+		position:absolute;
+		right:0;
+	}
+}
+.editMode{
+	.valueDisplay, .customControl{
+		background-color:$red !important;
+	}
+}
+
+.tabs .tab-item.selected{
+	-webkit-box-shadow: 0px -2px 0px 0px $positive;
+	-moz-box-shadow: 0px -2px 0px 0px $positive;
+	box-shadow: 0px -2px 0px 0px $positive;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="bleTest">
+    <head>
+        <meta charset="utf-8" />
+        <!--<meta name="format-detection" content="telephone=no" />-->
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link href="css/ionic.app.css" rel="stylesheet">
+
+        <!-- ionic/angularjs js -->
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+        <!-- cordova script (this will be a 404 during development) -->
+        <script src="cordova.js"></script>
+
+        <!-- lodash js -->
+        <script src="lib/lodash/lodash.js"></script>
+
+        <!-- your app's js -->
+        
+        <script src="js/app.js"></script>
+        <script src="js/controller_AppController.js"></script>
+        <script src="js/controller_Messenger.js"></script>
+        <script src="js/controller_Tamagotchi.js"></script>
+        <script src="js/controller_LogoRobot.js"></script>
+        <script src="js/controller_UART.js"></script>
+
+        <script src="js/services.js"></script>
+        <!--<script type="text/javascript" src="js/index.js"></script>-->
+
+        <title>Heart Rate</title>
+    </head>
+    <body>
+        <ion-nav-view></ion-nav-view>
+<!--
+        <div>
+            <ion-header-bar>
+                <h1 class="title">BLE Messenger</h1>
+                <button class="button button-positive" ng-click="connectClicked()">
+                    {{connectStatus==false?"connect":"disconnect"}}
+                </button>
+            </ion-header-bar>
+            <ion-content>
+                <h1 id="dataDisplay">{{bleData}}</h1>
+                <div id="statusDiv">{{statusMsg}}</div>
+                <div class="progressBar" id="foodLV"><div class="inner" style="width:{{foodChari}}%;"></div></div>
+                <div class="progressBar" id="playLV"><div class="inner" style="width:{{playChari}}%;"></div></div>
+                <div class="progressBar" id="cleanLV"><div class="inner" style="width:{{cleanChari}}%;"></div></div>
+                <ion-list>
+                    <label class="item item-input">
+                        <input type="text" ng-model="formData.msg" placeholder="Message"/>
+                    </label>
+                </ion-list>
+                <button class="button button-block button-positive" ng-click="sendMsg()" >send </button>
+                <button class="button button-block button-positive" ng-click="readVal()" >read </button>
+            </ion-content>
+        </div>
+
+
+
+        <script id="bleSelector.html" type="text/ng-template">
+          <ion-modal-view>
+            <ion-header-bar>
+              <h3 class="title">Connect to BLE device</h3>
+            </ion-header-bar>
+            <ion-content>
+              <ion-list>
+                <ion-item ng-repeat="ble in bles" ng-click="connectBle(ble,$index)">
+                    {{ble.id}} {{ble.name}}
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ion-modal-view>
+        </script>-->
+    </body>
+</html>
