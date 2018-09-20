@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "A tutorial to show how to make arduino 101 communicate with mobile app",
   "dependencies": {
-    "cordova-android": "^7.0.0",
+    "cordova-android": "^6.0.0",
     "cordova-plugin-ble-central": "^1.2.2",
     "cordova-plugin-compat": "^1.2.0",
     "gulp": "^3.5.6",
