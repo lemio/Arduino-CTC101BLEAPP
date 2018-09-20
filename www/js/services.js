@@ -10,7 +10,8 @@ angular.module('bleTest.services', [])
       var me=this;
 
       function scanFailure(reason) {
-          alert("BLE Scan Failed");
+		  console.log("Alert message : BLE scan failure");
+          alert("BLE Scan Failed, try turing on your location/GPS.");
       }
       ble.scan([], 5, onScan, scanFailure);
 

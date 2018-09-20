@@ -45,7 +45,8 @@ var app = {
         }
 
         function scanFailure(reason) {
-            alert("BLE Scan Failed");
+			console.log("Alert message : BLE scan failure");
+            alert("BLE Scan Failed, try turing on your location/GPS.");
         }
 
         ble.scan([heartRate.service], 5, onScan, scanFailure);
